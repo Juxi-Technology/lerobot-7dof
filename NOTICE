@@ -1,0 +1,40 @@
+Juxi Technology
+Copyright 2026 Juxi Technology
+
+----------------------------------------------------------------------
+This repository is a fork of the LeRobot project.
+
+  Upstream project : https://github.com/huggingface/lerobot
+  Upstream author  : Copyright 2024 The HuggingFace Inc. team
+  Upstream license : Apache License, Version 2.0 (see LICENSE)
+
+The fork is based on LeRobot 0.6.2.
+
+Modifications made by Juxi Technology, as required by
+Apache License 2.0, section 4(b):
+
+  1. SO-ARM101 motor configuration changed from 6 servos to 7.
+
+     src/lerobot/robots/so_follower/so_follower.py
+     src/lerobot/teleoperators/so_leader/so_leader.py
+
+       - a new wrist_yaw servo is added as ID 5
+       - the original wrist_roll motor moves to ID 6 (name unchanged)
+       - the gripper moves from ID 6 to ID 7
+       - the gripper keeps RANGE_0_100; all other joints use DEGREES
+
+  2. Calibration changed so no joint is treated as a full-turn joint.
+
+     Same two files, in calibrate():
+
+       The upstream code hard-codes wrist_roll as a full-turn joint
+       (0-4095). After the 7-DOF modification the wrist yaw and roll
+       joints have mechanical limits, so calibration now records the
+       real range of motion of every joint with
+       record_ranges_of_motion().
+
+  3. README.md rewritten, and README_CN.md added.
+
+Everything else is unmodified upstream code, and all upstream
+copyright, license and attribution notices are retained.
+----------------------------------------------------------------------
