@@ -1,0 +1,7 @@
+English | [简体中文](../zh-hans/09-train-model/imitation-learning-algorithms.md) | [繁體中文](../zh-hant/09-train-model/imitation-learning-algorithms.md) | [Deutsch](../de/09-train-model/imitation-learning-algorithms.md) | [Español](../es/09-train-model/imitation-learning-algorithms.md) | [Français](../fr/09-train-model/imitation-learning-algorithms.md) | [Italiano](../it/09-train-model/imitation-learning-algorithms.md) | [日本語](../ja/09-train-model/imitation-learning-algorithms.md) | [한국어](../ko/09-train-model/imitation-learning-algorithms.md) | [Português (BR)](../pt-br/09-train-model/imitation-learning-algorithms.md) | [Português (PT)](../pt-pt/09-train-model/imitation-learning-algorithms.md)
+
+# Imitation Learning Algorithms Supported by LeRobot
+
+https://github.com/huggingface/lerobot/tree/main/src/lerobot/policies
+
+![This image shows the framework of imitation learning algorithms supported by LeRobot. "Robot Learning" sits at the top and splits into two main categories: "Behavioral Cloning (BC)" and "Reinforcement Learning (RL)". Under BC, "Single-task policies" covers ACT, Diffusion Policy, VQ-BET and others, while "Generalist policies" covers π0 and SmolVLA. Under RL are HIL-SERL and TD-MPC. The image relates to the section introducing the imitation learning algorithms LeRobot supports, visually presenting the taxonomy and the specific algorithms within it.](../../en/images/d32-01.png)
